@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        const funA = (callback) =>{
+            console.log("this is a fun");
+            callback()   // funB()
+
+
+        }
+
+        
+
+        funA(() =>{
+            console.log("this is a funB");
+
+
+        })
+
+
+
+
+        // const user = (callback) => {
+        //     callback(" Alice");   //greet("Alice")
+        // }
+
+
+        // const greet = (name) => {
+        //     console.log("hi", name);
+
+        // }
+
+        // user(greet);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // function greet(name) {
+        //     console.log("hello ", name);
+        // }
+        // function user(callback) {
+        //     callback("Alice");
+        // }
+        // user(greet);
+
+        const greet = (name) => {
+            console.log("hi", name);
+
+        }
+        const user = (callback) => {
+            callback(" Alice");
+        }
+        user(greet);
+
+
+        function sayGoodbye() {
+            console.log("Goodbye!");
+        }
+
+        function greetUser(name, callback) {
+            console.log("Hello", name);
+            callback();
+        }
+        greetUser("Alice", sayGoodbye);
+
+    </script>
+
+
+</body>
+
+</html>
