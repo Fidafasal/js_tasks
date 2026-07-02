@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button onclick="fun()">click</button>
+    <button onclick="date()">Click .</button><br>
+    <div id="box" style="width:200px;height:100px;padding:16px;border:1px solid #000;">
+        Move mouse over this box!
+    </div>
+    <script>
+        const fun = () => {
+            console.log("this is a function");
+
+        }
+        function date() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+        const box= document.getElementById("box")
+        box.addEventListener("click",function(Date){
+            box.innerHTML="Mouse is over";
+        });
+        box.addEventListener("mouseout",function(){
+            box.innerHTML = "Mouse is out";
+        });
+    </script>
+</body>
+
+</html>
