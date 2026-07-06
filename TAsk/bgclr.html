@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="width:300px; height:200px; border:1px solid black;"></div><br>
+
+
+    <button id="red" onclick="fun('red')">red</button>
+    <button id="yellow" onclick="fun('yellow')">yellow</button>
+    <button id="blue" onclick="fun('blue')">blue</button>
+
+
+
+    <script>
+
+        const fun = (color) => {
+            const div = document.getElementById("box").style.backgroundColor=color;
+            // div.style.backgroundColor = color;
+        }
+
+
+
+
+        // const div = document.getElementById("box")
+        // const redbtn = document.getElementById("red")
+
+
+        // redbtn.addEventListener("click", function () {
+        //     div.style.backgroundColor = "red";
+        // });
+        // const ylwbtn = document.getElementById("yellow")
+        // ylwbtn.addEventListener("click", function () {
+        //     div.style.backgroundColor = "yellow";
+        // });
+        // const blubtn = document.getElementById("blue")
+        // blubtn.addEventListener("click", function () {
+        //     div.style.backgroundColor = "blue";
+        // });
+    </script>
+
+
+</body>
+
+</html>
