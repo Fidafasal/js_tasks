@@ -10,20 +10,97 @@
 <body>
 
     <h1 id="heading">hello</h1>
-    <button id="btn" onclick="fun()">click</button>
+    <button id="btn" onclick="fun()">click</button><br><br>
+
+    ------------------------------------------------------------------------------
+
+    <form>
+        <P>enter a value :</P>
+        <input id="num">
+        <button type="button" onclick="validation()">click</button>
+        <p id="text"></p>
+    </form><br>
+
+    ------------------------------------------------------------------------------
+
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Ad atque deserunt dolorem voluptatem cumque
+        nulla voluptatibus! Aspernatur minus optio sed, <br>provident repudiandae eius nobis, reprehenderit maxime ullam
+        deleniti, numquam laborum.</p>
+    <button id="btn1" onclick="fun1()">click</button><br><br>
+
+    ------------------------------------------------------------------------------
+
+    <h2>count</h2>
+    <h1 id="count">0</h1>
+    <button id="inc" onclick="inc()">Inc +</button>
+    <button id="dec" onclick="dec()">Dec -</button>
+    <button id="rst" onclick="rst()">Reset</button><br><br>
+
+    ------------------------------------------------------------------------------
+
+    <h2>Students details</h2>
+    Name:<input type="text" id="name">
+    <button id="submit" onclick="std()">submit</button>
+    <p id="msg"></p>
+
+    ------------------------------------------------------------------------------
+
 
 
     <script>
+        //    ------------------------------------------------------------------------------
 
-        // const button = document.getElementById("btn")
-        // const heading= document.getElementById("heading")
-        // button.addEventListener("click",function(){
-        //     heading.innerHTML="HELLO";
-        // })
-
-        const fun = ()=>{
+        const fun = () => {
             // const button = document.getElementById("btn")
-            const heading= document.getElementById("heading").innerHTML="HELLO";
+            const heading = document.getElementById("heading").innerHTML = "HELLO";
+        }
+
+
+        //    ------------------------------------------------------------------------------
+
+        function validation() {
+            let x = document.getElementById("num").value;
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "invalid";
+            } else {
+                text = "valid";
+            }
+            document.getElementById("text").innerHTML = text;
+
+        }
+
+        const fun1 = () => {
+            const phara = document.getElementById("p1").innerHTML = "   ";
+        }
+
+        //    ------------------------------------------------------------------------------
+        let count = 0
+        const heading = document.getElementById("count")
+        const inc = () => {
+            count++;
+            heading.textContent = count;
+        }
+        const dec = () => {
+            count--;
+            heading.textContent = count;
+        }
+        const rst = () => {
+            count = 0;
+            heading.textContent = count;
+        }
+
+        //    ------------------------------------------------------------------------------
+
+        const std = () => {
+            let name = document.getElementById("name").value
+            let text;
+            if (name == "") {
+                text = "please fill."
+            } else {
+                text = "succesfull"
+            }
+            document.getElementById("msg").innerHTML = text;
         }
 
 
