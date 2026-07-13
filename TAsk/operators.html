@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //spread()
+        //append two arr
+
+        // arr1 = [1, 2, 3]
+        // arr2 = [3, 4]
+        // arr3 = [...arr1, ...arr2]
+
+        // console.log(arr3);
+        // //-----------------------------------------------------------------
+        // // let a= [9,8,7]
+        // // let b= a;
+        // // b.push(4)
+        // // console.log(a);
+        // // console.log(b);
+
+
+        // //coppy an  array
+
+
+        // let a = [9, 8, 7]
+        // let b = [...a]
+        // b.push(4)
+
+        // console.log(a);
+        // console.log(b);
+
+        // //-----------------------------------------------------------------
+        // //add new value 
+
+        // let c=[3,4,8]
+        // let d=[1,...c,6]
+
+        // console.log(c);
+        // console.log(d);
+
+
+
+        // //-----------------------------------------------------------------
+
+        // // rest()operator
+
+        // function num(...numbers){
+        //     console.log(numbers);
+
+        // }
+        // num(10,20,30,40);
+
+        // // -----------------------------------------------------------------
+
+        // const add=(...numbers)=>{
+        //     let total=0;
+        //     for(let num of numbers){
+        //         total+=num;
+        //     }
+        //     console.log(total);
+
+        // }
+        // add(10,20,30)
+
+        // // -----------------------------------------------------------------
+
+        // const stu=(name,...mark)=>{
+        //     console.log(name);
+        //     console.log(...mark);
+        // }
+
+        // stu("alice", 20,30,40);
+
+        // -----------------------------------------------------------------
+
+        // // hoisting
+
+        // sum(20, 30);
+        // function sum(a, b) {
+        //     console.log(a + b);
+
+        // }
+
+
+
+
+
+        // // const fun = (callback) => {
+        // //     console.log("Hello");
+        // //     callback();
+
+        // // }
+
+        // fun(() => {
+        //     return "hi"
+
+        // })
+        // console.log(fun());
+
+
+        // const sample = (a, b) => {
+
+        // }
+
+        // sample(() => {
+
+        // }, 39)
+
+
+
+
+        // const smapole = () => {
+        //     console.log("heloo");
+
+        // }
+
+        // setTimeout(smapole, 3000)
+
+
+        const click = (callback) => {
+            console.log("click download");
+           window.setTimeout(() => {
+                console.log("downloading...");
+                // return "downloading..";
+                callback();
+            }, 2000);
+
+
+        }
+        const download = () => {
+            console.log("file opened");
+        }
+
+        click(download);
+
+
+        
+        console.log("Start");
+
+        fetch("https://dummyjson.com/products")
+            .then(() => {
+                console.log("Data");
+            });
+
+        console.log("End");
+
+    </script>
+</body>
+
+</html>
